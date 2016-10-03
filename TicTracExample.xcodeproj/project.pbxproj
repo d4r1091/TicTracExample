@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C403A121D56804A000BBD26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A111D56804A000BBD26 /* AppDelegate.swift */; };
+		2C403A171D56804A000BBD26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C403A151D56804A000BBD26 /* Main.storyboard */; };
+		2C403A191D56804A000BBD26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C403A181D56804A000BBD26 /* Assets.xcassets */; };
+		2C403A1C1D56804A000BBD26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C403A1A1D56804A000BBD26 /* LaunchScreen.storyboard */; };
+		2C403A2D1D568BEA000BBD26 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A2C1D568BEA000BBD26 /* UserController.swift */; };
+		2C403A481D56989D000BBD26 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A3E1D56989D000BBD26 /* NetworkManager.swift */; };
+		2C403A491D56989D000BBD26 /* PersistenceManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A411D56989D000BBD26 /* PersistenceManger.swift */; };
+		2C403A4A1D56989D000BBD26 /* PersistentManger+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A431D56989D000BBD26 /* PersistentManger+Operations.swift */; };
+		2C403A4B1D56989D000BBD26 /* TicTracExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A441D56989D000BBD26 /* TicTracExample.xcdatamodeld */; };
+		2C403A501D5698EA000BBD26 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A4D1D5698EA000BBD26 /* UserModel.swift */; };
+		2C403A531D569923000BBD26 /* MappableUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A521D569923000BBD26 /* MappableUser.swift */; };
+		2C403A551D569972000BBD26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A541D569972000BBD26 /* User.swift */; };
+		2C403A571D569E13000BBD26 /* User+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A561D569E13000BBD26 /* User+Properties.swift */; };
+		2C403A591D56B2EE000BBD26 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A581D56B2EE000BBD26 /* UserListTableViewCell.swift */; };
+		2C403A5B1D56B5B0000BBD26 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C403A5A1D56B5B0000BBD26 /* UsersTableViewController.swift */; };
+		452CE52B37671C2B4175F11E /* Pods_TicTracExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8225FEBD469852AD06B2A9 /* Pods_TicTracExample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C403A0E1D56804A000BBD26 /* TicTracExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTracExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C403A111D56804A000BBD26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C403A161D56804A000BBD26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C403A181D56804A000BBD26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C403A1B1D56804A000BBD26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C403A1D1D56804A000BBD26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C403A2C1D568BEA000BBD26 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		2C403A3E1D56989D000BBD26 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2C403A411D56989D000BBD26 /* PersistenceManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManger.swift; sourceTree = "<group>"; };
+		2C403A431D56989D000BBD26 /* PersistentManger+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PersistentManger+Operations.swift"; sourceTree = "<group>"; };
+		2C403A451D56989D000BBD26 /* TicTracExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TicTracExample.xcdatamodel; sourceTree = "<group>"; };
+		2C403A4D1D5698EA000BBD26 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		2C403A521D569923000BBD26 /* MappableUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableUser.swift; sourceTree = "<group>"; };
+		2C403A541D569972000BBD26 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2C403A561D569E13000BBD26 /* User+Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Properties.swift"; sourceTree = "<group>"; };
+		2C403A581D56B2EE000BBD26 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
+		2C403A5A1D56B5B0000BBD26 /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		4B0FD015EC65E5B421E74F4A /* Pods-TicTracExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTracExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicTracExample/Pods-TicTracExample.debug.xcconfig"; sourceTree = "<group>"; };
+		7D8225FEBD469852AD06B2A9 /* Pods_TicTracExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTracExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1D19DE57E53C4ADDC67D18 /* Pods-TicTracExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTracExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicTracExample/Pods-TicTracExample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C403A0B1D56804A000BBD26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452CE52B37671C2B4175F11E /* Pods_TicTracExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C403A051D56804A000BBD26 = {
+			isa = PBXGroup;
+			children = (
+				2C403A101D56804A000BBD26 /* TicTracExample */,
+				2C403A0F1D56804A000BBD26 /* Products */,
+				9744C6AFA51F463B9E67D9CA /* Pods */,
+				6F3AC6918B9810EBF023B5F6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C403A0F1D56804A000BBD26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C403A0E1D56804A000BBD26 /* TicTracExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C403A101D56804A000BBD26 /* TicTracExample */ = {
+			isa = PBXGroup;
+			children = (
+				2C403A4C1D5698EA000BBD26 /* Model */,
+				2C403A4E1D5698EA000BBD26 /* Views */,
+				2C403A231D568097000BBD26 /* Controller */,
+				2C403A3C1D56989D000BBD26 /* Services */,
+				2C403A111D56804A000BBD26 /* AppDelegate.swift */,
+				2C403A151D56804A000BBD26 /* Main.storyboard */,
+				2C403A181D56804A000BBD26 /* Assets.xcassets */,
+				2C403A1A1D56804A000BBD26 /* LaunchScreen.storyboard */,
+				2C403A1D1D56804A000BBD26 /* Info.plist */,
+			);
+			path = TicTracExample;
+			sourceTree = "<group>";
+		};
+		2C403A231D568097000BBD26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C403A2C1D568BEA000BBD26 /* UserController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C403A3C1D56989D000BBD26 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C403A3D1D56989D000BBD26 /* Network */,
+				2C403A401D56989D000BBD26 /* Persistence */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2C403A3D1D56989D000BBD26 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2C403A3F1D56989D000BBD26 /* NetworkModel */,
+				2C403A3E1D56989D000BBD26 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2C403A3F1D56989D000BBD26 /* NetworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C403A521D569923000BBD26 /* MappableUser.swift */,
+			);
+			path = NetworkModel;
+			sourceTree = "<group>";
+		};
+		2C403A401D56989D000BBD26 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				2C403A421D56989D000BBD26 /* PersistenceModel */,
+				2C403A411D56989D000BBD26 /* PersistenceManger.swift */,
+				2C403A431D56989D000BBD26 /* PersistentManger+Operations.swift */,
+				2C403A441D56989D000BBD26 /* TicTracExample.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		2C403A421D56989D000BBD26 /* PersistenceModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C403A541D569972000BBD26 /* User.swift */,
+				2C403A561D569E13000BBD26 /* User+Properties.swift */,
+			);
+			path = PersistenceModel;
+			sourceTree = "<group>";
+		};
+		2C403A4C1D5698EA000BBD26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C403A4D1D5698EA000BBD26 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C403A4E1D5698EA000BBD26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C403A581D56B2EE000BBD26 /* UserListTableViewCell.swift */,
+				2C403A5A1D56B5B0000BBD26 /* UsersTableViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F3AC6918B9810EBF023B5F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D8225FEBD469852AD06B2A9 /* Pods_TicTracExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9744C6AFA51F463B9E67D9CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B0FD015EC65E5B421E74F4A /* Pods-TicTracExample.debug.xcconfig */,
+				CA1D19DE57E53C4ADDC67D18 /* Pods-TicTracExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C403A0D1D56804A000BBD26 /* TicTracExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C403A201D56804A000BBD26 /* Build configuration list for PBXNativeTarget "TicTracExample" */;
+			buildPhases = (
+				B293FAC2D57433FC6A5C7DFA /* [CP] Check Pods Manifest.lock */,
+				2C403A0A1D56804A000BBD26 /* Sources */,
+				2C403A0B1D56804A000BBD26 /* Frameworks */,
+				2C403A0C1D56804A000BBD26 /* Resources */,
+				2934CA094FEDD81B97B82193 /* [CP] Embed Pods Frameworks */,
+				ACCA74E4C2B0DC7C38FD6C55 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TicTracExample;
+			productName = TicTracExample;
+			productReference = 2C403A0E1D56804A000BBD26 /* TicTracExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C403A061D56804A000BBD26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Dario Carlomagno";
+				TargetAttributes = {
+					2C403A0D1D56804A000BBD26 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 2C403A091D56804A000BBD26 /* Build configuration list for PBXProject "TicTracExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C403A051D56804A000BBD26;
+			productRefGroup = 2C403A0F1D56804A000BBD26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C403A0D1D56804A000BBD26 /* TicTracExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C403A0C1D56804A000BBD26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C403A1C1D56804A000BBD26 /* LaunchScreen.storyboard in Resources */,
+				2C403A191D56804A000BBD26 /* Assets.xcassets in Resources */,
+				2C403A171D56804A000BBD26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2934CA094FEDD81B97B82193 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicTracExample/Pods-TicTracExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACCA74E4C2B0DC7C38FD6C55 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicTracExample/Pods-TicTracExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B293FAC2D57433FC6A5C7DFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C403A0A1D56804A000BBD26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C403A4B1D56989D000BBD26 /* TicTracExample.xcdatamodeld in Sources */,
+				2C403A501D5698EA000BBD26 /* UserModel.swift in Sources */,
+				2C403A5B1D56B5B0000BBD26 /* UsersTableViewController.swift in Sources */,
+				2C403A481D56989D000BBD26 /* NetworkManager.swift in Sources */,
+				2C403A571D569E13000BBD26 /* User+Properties.swift in Sources */,
+				2C403A591D56B2EE000BBD26 /* UserListTableViewCell.swift in Sources */,
+				2C403A4A1D56989D000BBD26 /* PersistentManger+Operations.swift in Sources */,
+				2C403A531D569923000BBD26 /* MappableUser.swift in Sources */,
+				2C403A2D1D568BEA000BBD26 /* UserController.swift in Sources */,
+				2C403A491D56989D000BBD26 /* PersistenceManger.swift in Sources */,
+				2C403A551D569972000BBD26 /* User.swift in Sources */,
+				2C403A121D56804A000BBD26 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C403A151D56804A000BBD26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C403A161D56804A000BBD26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C403A1A1D56804A000BBD26 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C403A1B1D56804A000BBD26 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C403A1E1D56804A000BBD26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C403A1F1D56804A000BBD26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C403A211D56804A000BBD26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B0FD015EC65E5B421E74F4A /* Pods-TicTracExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TicTracExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.dariocarlomagno.TicTracExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C403A221D56804A000BBD26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1D19DE57E53C4ADDC67D18 /* Pods-TicTracExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TicTracExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.dariocarlomagno.TicTracExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C403A091D56804A000BBD26 /* Build configuration list for PBXProject "TicTracExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C403A1E1D56804A000BBD26 /* Debug */,
+				2C403A1F1D56804A000BBD26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C403A201D56804A000BBD26 /* Build configuration list for PBXNativeTarget "TicTracExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C403A211D56804A000BBD26 /* Debug */,
+				2C403A221D56804A000BBD26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C403A441D56989D000BBD26 /* TicTracExample.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C403A451D56989D000BBD26 /* TicTracExample.xcdatamodel */,
+			);
+			currentVersion = 2C403A451D56989D000BBD26 /* TicTracExample.xcdatamodel */;
+			path = TicTracExample.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2C403A061D56804A000BBD26 /* Project object */;
+}
