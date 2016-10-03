@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 extension User {
-    @NSManaged var creationDate: NSDate?
+    @NSManaged var creationDate: Date?
     @NSManaged var email: String?
     @NSManaged var name: String?
     @NSManaged var infos: String?

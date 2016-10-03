@@ -7,11 +7,31 @@
 //
 
 import Foundation
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 struct UserController {
     
-    static func getUsersList(fetchFromServer: Bool = true,
-                             completion: ([UserModel]?) -> Void) {
+    static func getUsersList(_ fetchFromServer: Bool = true,
+                             completion: @escaping ([UserModel]?) -> Void) {
         /*
          Probably it could be refactored
          normalizing the way I fill the array of UserModel
@@ -66,13 +86,13 @@ struct UserController {
         return users.count > 0
     }
     
-    static func storeUser(name: String?,
+    static func storeUser(_ name: String?,
                           email: String?,
                           infos: String?) {
         
-        let userParameters = ["name" : name,
-                              "email" : email,
-                              "infos" : infos] as [String : AnyObject?]
+        let userParameters = ["name" : name as Optional<AnyObject>,
+                              "email" : email as Optional<AnyObject>,
+                              "infos" : infos as Optional<AnyObject>] as [String : AnyObject?]
         
         PersistenceManager.createUser(userParameters)
     }
@@ -81,7 +101,7 @@ struct UserController {
         PersistenceManager.batchDelete()
     }
     
-    static func refreshUsersList(completion: ([UserModel]?) -> Void) {
+    static func refreshUsersList(_ completion: @escaping ([UserModel]?) -> Void) {
         deleteAllUsers()
         getUsersList { (users: [UserModel]?) in
             guard users?.count > 0 else {

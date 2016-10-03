@@ -7,8 +7,8 @@ target 'TicTracExample' do
     
     # Pods for TicTracExample
     pod 'MBProgressHUD', :git => 'https://github.com/jdg/MBProgressHUD.git'
-    pod 'Alamofire', '~> 3.4'
-    pod 'AlamofireObjectMapper', '~> 3.0'
-    pod 'AlamofireImage', '~> 2.5'
+    pod 'Alamofire', '~> 4.0'
+    pod 'AlamofireObjectMapper', '~> 4.0'
+    pod 'AlamofireImage', '~> 3.1'
     pod 'IQKeyboardManager'
 end

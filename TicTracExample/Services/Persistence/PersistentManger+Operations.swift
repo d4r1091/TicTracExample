@@ -11,28 +11,28 @@ import CoreData
 
 extension PersistenceManager {
     
-    static func retriveUsers(limit: Int? = nil) -> [User] {
-        let itemsFetch = User.fetchRequest()
+    static func retriveUsers(_ limit: Int? = nil) -> [User] {
+        let itemsFetch = User.userFetchRequest()
         
         if let limit = limit {
             itemsFetch.fetchLimit = limit
         }
         
         do {
-            let items =  try PersistenceManager.context.executeFetchRequest(itemsFetch) as! [User]
+            let items =  try PersistenceManager.context.fetch(itemsFetch) as! [User]
             return items;
         } catch {
             fatalError("Failed to fetch items: \(error)")
         }
     }
     
-    static func fetchRequestInBackground(callback: (users: [User]?) -> Void) {
-        let fetchRequest = User.fetchRequest()
+    static func fetchRequestInBackground(_ callback: @escaping (_ users: [User]?) -> Void) {
+        let fetchRequest = User.userFetchRequest()
         let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) {
-            callback(users: $0.finalResult as? [User])
-        }
+            callback($0.finalResult as! [User])
+        
         do {
-            try PersistenceManager.context.executeRequest(asynchronousFetchRequest) as! NSAsynchronousFetchResult
+            try PersistenceManager.context.execute(asynchronousFetchRequest) as! NSAsynchronousFetchResult
         } catch {
             fatalError("Failed to fetch users: \(error)")
         }
@@ -40,11 +40,11 @@ extension PersistenceManager {
     
     static func batchDelete() {
         PersistenceManager.save()
-        let fetchRequest = User.fetchRequest()
-        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        batchDeleteRequest.resultType = .ResultTypeCount
+        let fetchRequest = User.userFetchRequest()
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+        batchDeleteRequest.resultType = .resultTypeCount
         do {
-            let batchDeleteResult = try PersistenceManager.context.executeRequest(batchDeleteRequest) as! NSBatchDeleteResult
+            let batchDeleteResult = try PersistenceManager.context.execute(batchDeleteRequest) as! NSBatchDeleteResult
             debugPrint("The batch delete request has deleted \(batchDeleteResult.result!) records.")
             PersistenceManager.context.reset()
         } catch {
@@ -52,16 +52,16 @@ extension PersistenceManager {
         }
     }
     
-    static func createUser(parameters: [String: AnyObject?]) {
+    static func createUser(_ parameters: [String: AnyObject?]) {
         supportCreateUser(PersistenceManager.context, parameters: parameters)
         debugPrint("Created User")
     }
     
-    private static func createUserInBackground(parameters: [String: AnyObject?]) {
+    fileprivate static func createUserInBackground(_ parameters: [String: AnyObject?]) {
         let context = PersistenceManager.context
-        let privateContext = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
-        privateContext.parentContext = context
-        privateContext.performBlock {
+        let privateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        privateContext.parent = context
+        privateContext.perform {
             supportCreateUser(privateContext, parameters: parameters)
             do {
                 try privateContext.save()
@@ -72,7 +72,7 @@ extension PersistenceManager {
         }
     }
     
-    private static func supportCreateUser(contex: NSManagedObjectContext, parameters: [String : AnyObject?]) {
+    fileprivate static func supportCreateUser(_ contex: NSManagedObjectContext, parameters: [String : AnyObject?]) {
         let user = User.create(context)
         user.name = parameters["name"] as? String
         user.email = parameters["email"] as? String

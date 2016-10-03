@@ -11,33 +11,33 @@ import CoreData
 
 struct PersistenceManager {
     
-    private static let momd = "TicTracExample"
-    private static let sqlite = "TicTracExampleCoreData.sqlite"
+    fileprivate static let momd = "TicTracExample"
+    fileprivate static let sqlite = "TicTracExampleCoreData.sqlite"
     
     // MARK: - Core Data stack
     
     static var context: NSManagedObjectContext = {
-        var managedObjectContext = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = PersistenceManager.persistentStoreCoordinator
         managedObjectContext.undoManager = nil
         return managedObjectContext
     }()
     
-    private static var managedModel: NSManagedObjectModel = {
-        let modelURL = NSBundle.mainBundle().URLForResource(momd, withExtension: "momd")!
-        return NSManagedObjectModel(contentsOfURL: modelURL)!
+    fileprivate static var managedModel: NSManagedObjectModel = {
+        let modelURL = Bundle.main.url(forResource: momd, withExtension: "momd")!
+        return NSManagedObjectModel(contentsOf: modelURL)!
     }()
     
-    private static var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+    fileprivate static var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: PersistenceManager.managedModel)
-        let url = PersistenceManager.applicationDocumentsDirectory.URLByAppendingPathComponent(sqlite)
+        let url = PersistenceManager.applicationDocumentsDirectory.appendingPathComponent(sqlite)
         
         let options = [NSMigratePersistentStoresAutomaticallyOption: true,
                        NSInferMappingModelAutomaticallyOption: true]
         do {
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType,
-                                                       configuration: nil,
-                                                       URL: url,
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType,
+                                                       configurationName: nil,
+                                                       at: url,
                                                        options: nil)
         } catch {
             fatalError("Error: \(error)")
@@ -48,11 +48,11 @@ struct PersistenceManager {
     
     // MARK: - Core Data Saving support
     
-    static func save(inBackground: Bool = false) {
+    static func save(_ inBackground: Bool = false) {
         guard context.hasChanges else { return }
         
         if inBackground {
-            context.performBlock {
+            context.perform {
                 PersistenceManager.privateSave()
                 debugPrint("Saved in background")
             }
@@ -63,7 +63,7 @@ struct PersistenceManager {
         
     }
     
-    private static func privateSave() {
+    fileprivate static func privateSave() {
         do {
             try context.save()
         } catch {
@@ -73,8 +73,8 @@ struct PersistenceManager {
     
     // MARK: - Utility
     
-    private static var applicationDocumentsDirectory: NSURL = {
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+    fileprivate static var applicationDocumentsDirectory: URL = {
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return urls[urls.count-1]
     }()
 }

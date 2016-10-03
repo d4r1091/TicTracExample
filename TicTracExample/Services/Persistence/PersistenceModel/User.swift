@@ -12,17 +12,17 @@ import CoreData
 
 class User: NSManagedObject {
     
-    class func create(context: NSManagedObjectContext) -> User {
-        return NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: context) as! User
+    class func create(_ context: NSManagedObjectContext) -> User {
+        return NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
     }
     
-    class func fetchRequest() -> NSFetchRequest {
+    class func userFetchRequest() -> NSFetchRequest<User> {
         return NSFetchRequest(entityName: "User")
     }
     
     override func awakeFromInsert() {
         super.awakeFromInsert()
-        creationDate = NSDate()
+        creationDate = Date()
     }
     
 }

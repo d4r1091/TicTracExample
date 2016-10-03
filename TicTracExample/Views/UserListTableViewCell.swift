@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol UserListTableViewCellDelegate: class {
-    func didClickedUpdateNavigationBar(newTitle: String?, cell: UITableViewCell)
+    func didClickedUpdateNavigationBar(_ newTitle: String?, cell: UITableViewCell)
 }
 
 class UserListTableViewCell: UITableViewCell{
@@ -26,27 +26,27 @@ class UserListTableViewCell: UITableViewCell{
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var infosLabel: UILabel!
     @IBOutlet var labelCollection: [UILabel]!
-    @IBAction func cellButtonClicked(sender: AnyObject) {
+    @IBAction func cellButtonClicked(_ sender: AnyObject) {
         guard delegate != nil else { return }
         delegate?.didClickedUpdateNavigationBar(nameLabel.text, cell: self)
-        changeLabelsColor(UIColor.greenColor())
+        changeLabelsColor(UIColor.green)
     }
     
     // MARK: Fill Outlets
     
-    func configureCellViews(name: String?,
+    func configureCellViews(_ name: String?,
                             email: String?,
                             infos:String?) {
         nameLabel.text = name
         emailLabel.text = email
         infosLabel.text = infos
-        changeLabelsColor(UIColor.redColor())
+        changeLabelsColor(UIColor.red)
         heightConstraint.constant = 65
     }
     
     // MARK: Update View
     
-    func changeLabelsColor(color :UIColor) {
+    func changeLabelsColor(_ color :UIColor) {
         for i in 0..<labelCollection.count {
             let aLabel = labelCollection[i]
             aLabel.textColor = color

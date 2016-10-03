@@ -12,19 +12,20 @@ import AlamofireObjectMapper
 
 struct NetworkManager {
     
-    private struct HTTPEndPoints {
+    fileprivate struct HTTPEndPoints {
         static let mainHTTPaddressPrefix = "http://media.tictrac.com/"
         static let usersList = mainHTTPaddressPrefix + "tmp/users.json"
     }
     
-    static func getUsersList(callback: ([MappableUser]?) -> Void) {
-        Alamofire.request(.GET, HTTPEndPoints.usersList).responseObject { (response: Response<UsersResponse, NSError> ) -> Void in
-            let usersResponse = response.result.value
-            guard usersResponse?.users?.count > 0 else {
+    static func getUsersList(_ callback: @escaping ([MappableUser]?) -> Void) {
+        Alamofire.request(HTTPEndPoints.usersList).responseJSON { response in
+            let usersResponse = response.result.value as? UsersResponse
+            guard usersResponse?.users != nil else {
                 callback(nil)
                 return
             }
             callback(usersResponse?.users)
+
         }
     }
 }

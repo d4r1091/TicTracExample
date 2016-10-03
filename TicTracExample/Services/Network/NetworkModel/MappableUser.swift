@@ -19,7 +19,7 @@ final class MappableUser: Mappable {
      I don't have any kind of Model Specification's Document
      */
     
-    init?(_ map: Map) {
+    init?(map: Map) {
         
     }
     
@@ -33,7 +33,7 @@ final class MappableUser: Mappable {
 final class UsersResponse: Mappable {
     var users: [MappableUser]?
     
-    init?(_ map: Map) {
+    init?(map: Map) {
         
     }
     
